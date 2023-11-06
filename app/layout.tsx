@@ -15,20 +15,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider
-      appearance={{
-        elements: {
-          formButtonPrimary: "bg-orange-400 hover:bg-orange-500",
-          footerActionLink: "text-orange-400 hover:text-orange-500",
-        },
-      }}>
-      <html lang="en">
-        <body className="relative">
-          <Navbar />
+    <html lang="en">
+      <body className="relative">
+        <ClerkProvider
+          appearance={{
+            elements: {
+              formButtonPrimary: "bg-orange-400 hover:bg-orange-500",
+              footerActionLink: "text-orange-400 hover:text-orange-500",
+            },
+          }}>
           {children}
-          <Footer />
-        </body>
-      </html>
-    </ClerkProvider>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 }
